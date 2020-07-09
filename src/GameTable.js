@@ -15,10 +15,10 @@ export default class GameTable {
     return []
   }
   
-  move(step) {
+  move(step, sign) {
     this.table.map (e => {
       if (e.x === step.x && e.y === step.y) {
-        e.value = e.value === null ? step.sign : e.value
+        e.value = e.value === null ? sign : e.value
       }
       return e;
     })
